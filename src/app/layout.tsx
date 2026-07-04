@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
-import Script from "next/script"; // Import the Next.js script optimizer
+import Script from "next/script";
+import { Providers } from "./providers"; // Import your provider wrapper
 import "./globals.css";
 
 const bodyFont = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-body" });
@@ -17,7 +18,9 @@ export default function RootLayout({
   return ( 
     <html lang="en" className={`${bodyFont.variable} ${displayFont.variable} dark`}> 
       <body>
-        {children}
+        <Providers>
+          {children}
+        </Providers>
 
         {/* Global Site Tag (gtag.js) - Google Analytics */}
         <Script
@@ -27,7 +30,7 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag()){dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-8RHRJJFP35');
           `}
