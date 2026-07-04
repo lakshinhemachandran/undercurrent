@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+  background-image: radial-gradient(circle at top left, rgba(45, 212, 191, 0.12), transparent 28%), radial-gradient(circle at top right, rgba(99, 102, 241, 0.16), transparent 30%), linear-gradient(180deg, #020617 0%, #081120 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.45) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 999px;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.26);
+  color: #ecfeff;
+}
+
+.glass-card {
+  @apply border border-white/10 bg-white/[0.05] backdrop-blur-xl shadow-soft;
+}
