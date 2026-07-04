@@ -624,6 +624,9 @@ video {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.mt-12 {
+  margin-top: 3rem;
+}
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -995,6 +998,9 @@ video {
 .p-3 {
   padding: 0.75rem;
 }
+.p-3\.5 {
+  padding: 0.875rem;
+}
 .p-4 {
   padding: 1rem;
 }
@@ -1170,6 +1176,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity, 1));
 }
+.text-slate-500 {
+  --tw-text-opacity: 1;
+  color: rgb(100 116 139 / var(--tw-text-opacity, 1));
+}
 .text-slate-950 {
   --tw-text-opacity: 1;
   color: rgb(2 6 23 / var(--tw-text-opacity, 1));
@@ -1188,6 +1198,12 @@ video {
 }
 .text-transparent {
   color: transparent;
+}
+.underline {
+  text-decoration-line: underline;
+}
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 .opacity-0 {
   opacity: 0;
@@ -1313,9 +1329,19 @@ body {
   background-color: rgb(255 255 255 / 0.07);
 }
 
+.hover\:text-slate-100:hover {
+  --tw-text-opacity: 1;
+  color: rgb(241 245 249 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-slate-50:hover {
   --tw-text-opacity: 1;
   color: rgb(248 250 252 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-teal-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(94 234 212 / var(--tw-text-opacity, 1));
 }
 
 .focus\:border-teal-300\/50:focus {
