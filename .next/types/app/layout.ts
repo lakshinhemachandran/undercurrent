@@ -1,4 +1,4 @@
-// File: C:\Users\hlaks\OneDrive\Desktop\Projects\Coding Projects\undercurrent\src\app\layout.tsx
+// File: /home/runner/work/undercurrent/undercurrent/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
