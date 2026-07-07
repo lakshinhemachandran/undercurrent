@@ -21,7 +21,7 @@ In the strictly limited event that the Owner, Lakshin Hemachandran, grants you e
 
 1. Mandatory Copyright Retention: All existing copyright notices, trademark indicators, attribution metadata, and licensing banners within the source code files, documentation files, and visible application user interfaces must be preserved in their exact original form without modification.
 2. Explicit Creator Attribution Banner: Any permitted copy, fork, or redistribution must display conspicuously and permanently in the primary documentation (e.g., README.md) and in the runtime or startup interface of the application, the following precise text:
-   "Created by Lakshin Hemachandran. Original repository available at ://github.com."
+   "Created by Lakshin Hemachandran. Original repository available at https://github.com/lakshinhemachandran/undercurrent"
 3. Prohibition of Misleading Authorship Claims: Under no circumstances may any Licensee, Copier, or Forker state, imply, insinuate, or otherwise lead a third party to believe that the Software, the fork, the modification, or any portion thereof was created, authored, developed, or engineered by anyone other than Lakshin Hemachandran. The individual copying or modifying the source code is strictly prohibited from putting their name in an author or creator banner of any forked or derived version.
 4. Revocability: Any authorization or permission granted by Lakshin Hemachandran is entirely conditional, non-exclusive, non-transferable, and remains dynamically revocable at the sole discretion of the Owner at any given moment for any reason. Upon notice of revocation, the Licensee must immediately delete all digital copies of the Software.
 
