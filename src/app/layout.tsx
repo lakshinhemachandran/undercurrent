@@ -2,7 +2,7 @@
  * Copyright © 2026 Lakshin Hemachandran. All Rights Reserved.
  * This file is part of the "Undercurrent" project.
  * Unauthorized copying, modification, or redistribution of this file 
- * via any medium is strictly prohibited. Restructured under the terms 
+ * via any me dium is strictly prohibited. Restructured under the terms 
  * of the proprietary LICENSE file located in the root repository.
  */
 
@@ -40,6 +40,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
         {/* Umami Analytics */}
         <Script src="https://umami.is" data-website-id="d854d6b1-e098-434d-b1c1-b7fe9c02f1fe" strategy="afterInteractive" />
+        {/* Simple Analytics */}
+        <Script src="https://scripts.simpleanalyticscdn.com/latest.js"  />
       </body>
     </html>
   );
