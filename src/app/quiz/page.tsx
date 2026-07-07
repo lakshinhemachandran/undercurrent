@@ -1,3 +1,12 @@
+/* 
+ * Copyright © 2026 Lakshin Hemachandran. All Rights Reserved.
+ * This file is part of the "Undercurrent" project.
+ * Unauthorized copying, modification, or redistribution of this file 
+ * via any medium is strictly prohibited. Restructured under the terms 
+ * of the proprietary LICENSE file located in the root repository.
+ */
+
+
 import { SiteHeader } from "@/components/site-header";
 import { QuizWizard } from "@/components/quiz-wizard";
 
