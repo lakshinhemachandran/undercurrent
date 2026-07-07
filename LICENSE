@@ -1,0 +1,36 @@
+SOFTWARE LICENSE AGREEMENT & TERMS OF USE
+FOR THE SOFTWARE KNOWN AS "UNDERCURRENT"
+Copyright © 2026 Lakshin Hemachandran. All Rights Reserved.
+
+IMPORTANT: READ THIS AGREEMENT CAREFULLY BEFORE ACCESSING, DOWNLOADING, OR USING THIS SOFTWARE.
+
+This Software License Agreement ("Agreement") is a legally binding contract between you (either an individual or a single legal entity, hereinafter referred to as the "Licensee", "User", or "You") and Lakshin Hemachandran (hereinafter referred to as the "Licensor", "Owner", or "Author"), the sole copyright owner and author of the repository, source code, documentation, assets, and binaries associated with the software project "Undercurrent" hosted at ://github.com.
+
+By accessing, viewing, downloading, cloning, forking, compiling, executing, or otherwise utilizing any part of the Undercurrent software project, you unconditionally agree to be bound by the highly restrictive terms of this Agreement. If you do not agree to these terms, you are strictly prohibited from utilizing this Software for any purpose.
+
+SECTION 1: ABSOLUTE RESTRICTION OF RIGHT TO COPY AND REPRODUCE
+1. No Unauthorized Copying: The Licensor explicitly reserves all copyrights, trade secrets, trademarks, intellectual property, and proprietary rights in and to the Software. You may not copy, duplicate, replicate, clone, download, mirror, snapshot, or otherwise reproduce the Software, in whole or in part, onto any physical media, local hard drive, cloud server, or remote hosting platform without the explicit, documented, prior written consent of Lakshin Hemachandran.
+2. Permitted Public Git Interaction Exception: To the minimal extent required by the GitHub platform terms of service, you are permitted to "Fork" the repository within the GitHub infrastructure for the exclusive purpose of viewing the source code online or submitting a public pull request back to the original repository. This exception grants zero permanent rights to retain, modify, or extract the code for outside usage.
+
+SECTION 2: TOTAL PROHIBITION ON REDISTRIBUTION, DISTRIBUTION, AND COMMERCIALIZATION
+1. No Redistribution: You are explicitly and strictly forbidden from distributing, redistributing, publishing, transferring, leasing, renting, sublicensing, selling, assigning, or otherwise conveying the Software, its source code, compiled binaries, modified iterations, or any derived works to any third party under any circumstances.
+2. No Public or Private Mirrors: You may not host public or private mirrors of the Undercurrent codebase or any fraction thereof on GitLab, Bitbucket, SourceForge, personal servers, local area networks, or any other distribution mechanism without the explicit written permission of Lakshin Hemachandran.
+
+SECTION 3: CONDITIONAL USAGE ONLY UPON EXPLICIT WRITTEN PERMISSION
+In the strictly limited event that the Owner, Lakshin Hemachandran, grants you explicit, formalized, and written authorization to utilize, copy, fork, modify, or redistribute the Software (hereinafter referred to as "Authorized Permission"), your rights remain bound to the following hyper-restrictive stipulations:
+
+1. Mandatory Copyright Retention: All existing copyright notices, trademark indicators, attribution metadata, and licensing banners within the source code files, documentation files, and visible application user interfaces must be preserved in their exact original form without modification.
+2. Explicit Creator Attribution Banner: Any permitted copy, fork, or redistribution must display conspicuously and permanently in the primary documentation (e.g., README.md) and in the runtime or startup interface of the application, the following precise text:
+   "Created by Lakshin Hemachandran. Original repository available at ://github.com."
+3. Prohibition of Misleading Authorship Claims: Under no circumstances may any Licensee, Copier, or Forker state, imply, insinuate, or otherwise lead a third party to believe that the Software, the fork, the modification, or any portion thereof was created, authored, developed, or engineered by anyone other than Lakshin Hemachandran. The individual copying or modifying the source code is strictly prohibited from putting their name in an author or creator banner of any forked or derived version.
+4. Revocability: Any authorization or permission granted by Lakshin Hemachandran is entirely conditional, non-exclusive, non-transferable, and remains dynamically revocable at the sole discretion of the Owner at any given moment for any reason. Upon notice of revocation, the Licensee must immediately delete all digital copies of the Software.
+
+SECTION 4: MODIFICATIONS, DERIVATIVE WORKS, AND FORKS
+1. No Derivative Works Without Express Permission: You may not alter, modify, patch, extend, translate, decompile, reverse-engineer, or create derivative works based upon the Undercurrent software without express written authorization.
+2. Automatic Assignment of Derived IP: Should you create a modified or derived version of the software with written permission, you hereby irrevocably grant, transfer, and assign all global intellectual property rights, titles, and interests in those modifications back to the original Owner, Lakshin Hemachandran, ensuring the original Author retains absolute control over the extended software ecosystem.
+
+SECTION 5: DISCLAIMER OF WARRANTY AND TERMINATION
+1. Term and Violation: This license and any conditional rights granted hereunder terminate automatically, instantly, and without notice if you fail to comply with any restriction specified within this text. 
+2. No Warranty: THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHOR OR COPYRIGHT HOLDER (LAKSHIN HEMACHANDRAN) BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+BY PROCEEDING TO VIEW OR ENGAGE WITH THIS SOURCE CODE, YOU ACKNOWLEDGE THE ABSOLUTE OWNERSHIP OF LAKSHIN HEMACHANDRAN AND AGREE TO COMPLY WITH THESE HIGHLY RESTRICTIVE LAWS AND TERMS.
