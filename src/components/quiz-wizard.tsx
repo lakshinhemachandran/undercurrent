@@ -13,7 +13,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Check, ChevronLeft, ChevronRight, Loader2, LockKeyhole } from "lucide-react";
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { discoveryResources } from "@/lib/site-content";
 import { cn, clamp } from "@/lib/utils";
 import { useQuizStore } from "@/store/quiz-store";
 import { SelectionCard } from "@/components/selection-card";
@@ -163,6 +162,7 @@ export function QuizWizard() {
                 </div>
                 <h2 className="mt-3 font-display text-3xl text-slate-50">Your pattern map is ready.</h2>
                 <p className="mt-3 max-w-3xl leading-7 text-slate-300">{analysis?.summary}</p>
+                <p className="mt-3 max-w-3xl text-sm text-teal-100/90">{analysis?.intentSignal}</p>
               </div>
 
               <div className="grid gap-4 lg:grid-cols-2">
@@ -181,22 +181,63 @@ export function QuizWizard() {
               </div>
 
               <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
-                <h3 className="text-sm uppercase tracking-[0.24em] text-slate-400">Grounding ideas</h3>
+                <h3 className="text-sm uppercase tracking-[0.24em] text-slate-400">Quantified indicators</h3>
                 <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-                  {analysis?.groundingTechniques.map((technique) => (
-                    <div key={technique} className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 text-sm leading-6 text-slate-200">
-                      {technique}
+                  {analysis?.quantifiedIndicators.map((indicator) => (
+                    <div key={indicator.indicator} className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 text-sm leading-6 text-slate-200">
+                      <p className="font-semibold text-slate-50">
+                        {indicator.indicator}: {indicator.score}/5
+                      </p>
+                      <p className="mt-2 text-slate-300">{indicator.interpretation}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
-              <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {discoveryResources.map((resource) => (
-                  <a key={resource.label} href={resource.href} target="_blank" rel="noreferrer" className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 transition hover:border-teal-300/40 hover:bg-white/[0.07]">
-                    <p className="font-semibold text-slate-50">{resource.label}</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">{resource.description}</p>
-                  </a>
+              <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+                <h3 className="text-sm uppercase tracking-[0.24em] text-slate-400">Mind map</h3>
+                <pre className="mt-4 overflow-x-auto whitespace-pre-wrap rounded-2xl border border-white/10 bg-slate-950/50 p-4 text-sm leading-6 text-slate-200">
+                  {analysis?.mindMapMarkdown}
+                </pre>
+              </section>
+
+              <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+                <h3 className="text-sm uppercase tracking-[0.24em] text-slate-400">Evidence-backed interventions</h3>
+                <ul className="mt-4 space-y-3 text-slate-200">
+                  {analysis?.evidenceBackedInterventions.map((item) => <li key={item}>• {item}</li>)}
+                </ul>
+              </section>
+
+              <section className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+                <h3 className="text-sm uppercase tracking-[0.24em] text-slate-400">Clinical references</h3>
+                <div className="mt-4 grid gap-3 md:grid-cols-2">
+                  {analysis?.clinicalReferences.map((resource) => (
+                    <a key={resource.label} href={resource.href} target="_blank" rel="noreferrer" className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-teal-300/40">
+                      <p className="font-semibold text-slate-50">{resource.label}</p>
+                      <p className="mt-2 text-sm text-slate-300">{resource.description}</p>
+                    </a>
+                  ))}
+                </div>
+              </section>
+
+              <section className="grid gap-4 md:grid-cols-2">
+                {[
+                  { label: "Immediate crisis resources", key: "immediateCrisis" as const },
+                  { label: "Therapy directories", key: "therapyDirectories" as const },
+                  { label: "Support groups", key: "supportGroups" as const },
+                  { label: "Self-guided resources", key: "selfGuided" as const }
+                ].map((bucket) => (
+                  <div key={bucket.key} className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+                    <h3 className="text-sm uppercase tracking-[0.24em] text-slate-400">{bucket.label}</h3>
+                    <div className="mt-4 space-y-3">
+                      {analysis?.resourceDirectory[bucket.key]?.map((resource) => (
+                        <a key={`${bucket.key}-${resource.label}`} href={resource.href} target="_blank" rel="noreferrer" className="block rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-teal-300/40">
+                          <p className="font-semibold text-slate-50">{resource.label}</p>
+                          <p className="mt-2 text-sm text-slate-300">{resource.description}</p>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </section>
 
