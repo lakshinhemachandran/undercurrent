@@ -4,7 +4,7 @@ export function MedicalDisclaimer() {
       <p className="font-semibold text-slate-100">Self-reflection only.</p>
       <p className="mt-1">
         Undercurrent is not a doctor, therapist, or diagnostic tool. It does not provide medical diagnoses, treatment plans, or emergency care.
-        If you think you may be in immediate danger or need urgent help, contact local emergency services or a crisis line right away.
+        If you think you may be in immediate danger or need urgent help, contact local emergency services or call/text 988 right away.
       </p>
     </section>
   );
