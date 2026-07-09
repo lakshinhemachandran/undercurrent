@@ -33,13 +33,31 @@ export async function POST(request: Request) {
       }
     };
 
-    const response = await fetch("https://g4f.space/v1/chat/completions", {
+    const openRouterApiKey = process.env.OPENROUTER_API_KEY?.trim();
+    const openRouterModel = process.env.OPENROUTER_MODEL?.trim() || "openai/gpt-4o-mini";
+
+    if (!openRouterApiKey) {
+      const fallback = normalizeInsight(null);
+      return NextResponse.json(
+        {
+          insight: fallback,
+          source: "fallback",
+          note: "OpenRouter is not configured yet. Add OPENROUTER_API_KEY in your environment to enable live analysis."
+        },
+        { status: 200 }
+      );
+    }
+
+    const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        Authorization: "Bearer " + openRouterApiKey,
+        "HTTP-Referer": process.env.OPENROUTER_SITE_URL?.trim() || "http://localhost:3000",
+        "X-Title": "Undercurrent"
       },
       body: JSON.stringify({
-        model: "gpt-4o",
+        model: openRouterModel,
         temperature: 0.3,
         response_format: { type: "json_object" },
         messages: buildAnalysisMessages(payload)
@@ -52,7 +70,7 @@ export async function POST(request: Request) {
         {
           insight: fallback,
           source: "fallback",
-          note: "The external analysis service was unavailable, so a grounded local summary was returned."
+          note: "OpenRouter was unavailable, so a grounded local summary was returned."
         },
         { status: 200 }
       );
@@ -67,7 +85,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       insight: normalizeInsight(parsed),
-      source: "g4f"
+      source: "openrouter"
     });
   } catch {
     return NextResponse.json(
